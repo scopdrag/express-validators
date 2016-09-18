@@ -1,0 +1,26 @@
+{
+  "name": "validator",
+  "version": "1.0.0",
+  "description": "Express framework json object(req) validator.",
+  "main": "/src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://codemonster34@gmail.com@github.com/scopdrag/validator.git"
+  },
+  "keywords": [
+    "request-validator",
+    "json-object-validator",
+    "validator",
+    "express",
+    "nodejs"
+  ],
+  "author": "Nikhil Yadav <scopdrag@gmail.com> (http://scopdrag.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scopdrag/validator/issues"
+  },
+  "homepage": "https://github.com/scopdrag/validator#readme"
+}
