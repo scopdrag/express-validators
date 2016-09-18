@@ -1,2 +1,2 @@
-# validator
-Express framework json object(req) validator package.
+# Validator
+Express framework json object(req) validator package. 
