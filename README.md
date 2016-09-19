@@ -25,7 +25,6 @@ Or
 var Validators = Promise.promisifyAll(require('express-validators'));
 
 
-
 ## Usage
 
 1) e.g: Json object need to be validated.

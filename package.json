@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://codemonster34@gmail.com@github.com/scopdrag/validator.git"
+    "url": "git+https://codemonster34@gmail.com@github.com/scopdrag/express-validators.git"
   },
   "keywords": [
     "request-validator",
@@ -20,7 +20,7 @@
   "author": "Nikhil Yadav <scopdrag@gmail.com> (http://scopdrag.com)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/scopdrag/validator/issues"
+    "url": "https://github.com/scopdrag/express-validators/issues"
   },
-  "homepage": "https://github.com/scopdrag/validator#readme"
+  "homepage": "https://github.com/scopdrag/express-validators#readme"
 }
