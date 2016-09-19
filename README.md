@@ -135,26 +135,26 @@ e.g:
 
 ```javascript
 
-{ currentDate: { after: 'CurrentDate must be later date then afterDate' },
-  beforeDateValue: { before: 'BeforeDateValue must be before date then afterDate' },
-  alphaValue: { alpha: 'AlphaValue must be entirely alphabetic characters.' },
-  alpha_numValue: { alpha_num: 'Alpha numValue must be alpha-numeric characters.' },
-  betweenValue: { between: 'BetweenValue value must be in 10,30' },
-  confirmedValue: { confirmed: 'ConfirmedValue value must be same as ConfirmedValue1' },
-  dateValue: { date: 'DateValue must be a valid date.' },
-  notEqualValue: { notEqual: 'NotEqualValue value must not be equal to AlphaValue' },
-  numericValue: { numeric: 'NumericValue must be a numeric value.' },
-  lengthValue: { length: 'LengthValue should be 10 to 30 character long.' },
-  emailValue: { email: 'Please enter a valid email address.....' },
-  ipValue: { ip: 'IpValue must be a valid ip address.' },
-  notInValue: { notIn: 'NotInValue must not be in 23,35.' },
-  issetValue: { isset: 'IssetValue does not exists.' },
-  regexValue: { regex: 'RegexValue found to be in invalid pattern.' },
-  requiredValue: { required: 'RequiredValue field is required.' },
-  requiredIfValue: { requiredIf: 'RequiredIfValue field is required.' },
-  stringValue: { string: 'StringValue must be a string.' },
-  urlValue: { url: 'UrlValue must be a valid url.' },
-  amountValue: { amount: 'AmountValue must be an amount value.' } }
+{ currentDate: [ 'CurrentDate must be later date then afterDate' ],
+  beforeDateValue: [ 'BeforeDateValue must be before date then afterDate' ],
+  alphaValue: [ 'AlphaValue must be entirely alphabetic characters.' ],
+  alpha_numValue: [ 'Alpha numValue must be alpha-numeric characters.' ],
+  betweenValue: [ 'BetweenValue value must be in 10,30' ],
+  confirmedValue: [ 'ConfirmedValue value must be same as ConfirmedValue1' ],
+  dateValue: [ 'DateValue must be a valid date.' ],
+  notEqualValue: [ 'NotEqualValue value must not be equal to AlphaValue' ],
+  numericValue: [ 'NumericValue must be a numeric value.' ],
+  lengthValue: [ 'LengthValue should be 10 to 30 character long.' ],
+  emailValue: [ 'Please enter a valid email address.' ],
+  ipValue: [ 'IpValue must be a valid ip address.' ],
+  notInValue: [ 'NotInValue must not be in 23,35.' ],
+  issetValue: [ 'IssetValue does not exists.' ],
+  regexValue: [ 'RegexValue found to be in invalid pattern.' ],
+  requiredValue: [ 'RequiredValue field is required.' ],
+  requiredIfValue: [ 'RequiredIfValue field is required.' ],
+  stringValue: [ 'StringValue must be a string.' ],
+  urlValue: [ 'UrlValue must be a valid url.' ],
+  amountValue: [ 'AmountValue must be an amount value.' ] }
   
 ```  
 
