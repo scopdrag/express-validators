@@ -4,7 +4,7 @@ Expressjs framework json object(request) validator package.
 
 1. Using NPM
 ```bash
-npm install Validator --save
+npm install express-validators --save
 ```
 ```javascript
 var Validators = require('express-validators')
