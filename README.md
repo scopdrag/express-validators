@@ -7,14 +7,14 @@ Expressjs framework json object(request) validator package.
 npm install Validator --save
 ```
 ```javascript
-var Validators = require('Validator')
+var Validators = require('express-validators')
 ```
 
 or if you using bluebird promise
 
 ```javascript
 var Promise = require('bluebird');
-var Validators = require('validator');
+var Validators = require('express-validators');
 Promise.promisifyAll(Validators);
 ```
 
@@ -22,7 +22,7 @@ Or
 
 ```javascript
 
-var Validators = Promise.promisifyAll(require('validator'));
+var Validators = Promise.promisifyAll(require('express-validators'));
 
 
 

@@ -1,5 +1,5 @@
 {
-  "name": "validator",
+  "name": "express-validators",
   "version": "1.0.0",
   "description": "Express framework json object(req) validator.",
   "main": "src/index.js",
