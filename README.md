@@ -3,12 +3,12 @@ Expressjs framework json object(request) validator package.
 
 
 1. Using NPM
-    ```bash
-    npm install Validator --save
-    ```
-    ```javascript
-    var Validators = require('Validator')
-    ```
+```bash
+npm install Validator --save
+```
+```javascript
+var Validators = require('Validator')
+```
 
 or if you using bluebird promise
 
