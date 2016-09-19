@@ -23,6 +23,7 @@ Or
 ```javascript
 
 var Validators = Promise.promisifyAll(require('express-validators'));
+```
 
 
 ## Usage
