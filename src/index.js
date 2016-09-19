@@ -83,7 +83,6 @@ validation.afterMessage = function (validationParms, rawObject, proprtName) {
  */
 validation.alphaValidate = function (validationParms, rawObject, proprtName) {
 
-    var validationParmsArr = validationParms.split(':');
     if (rawObject.hasOwnProperty(proprtName)) {
         var currentValue = rawObject[proprtName];
 
@@ -104,7 +103,6 @@ validation.alphaValidate = function (validationParms, rawObject, proprtName) {
  */
 validation.alpha_numValidate = function (validationParms, rawObject, proprtName) {
 
-    var validationParmsArr = validationParms.split(':');
     if (rawObject.hasOwnProperty(proprtName)) {
         var currentValue = rawObject[proprtName];
 
@@ -127,7 +125,6 @@ validation.alpha_numValidate = function (validationParms, rawObject, proprtName)
  */
 validation.arrayValidate = function (validationParms, rawObject, proprtName) {
 
-    var validationParmsArr = validationParms.split(':');
     if (rawObject.hasOwnProperty(proprtName)) {
 
         if (typeof rawObject[proprtName] == 'array') {
@@ -191,7 +188,6 @@ validation.betweenValidate = function (validationParms, rawObject, proprtName) {
 
     var validationParmsArr;
     validationParmsArr = validationParms.split(':');
-    var ruleName = validationParmsArr[0];
     var constraintsValues = validationParmsArr[1].split(',');
 
     if (rawObject.hasOwnProperty(proprtName)) {
@@ -214,8 +210,6 @@ validation.betweenMessage = function (validationParms, rawObject, proprtName) {
 
     var validationParmsArr;
     validationParmsArr = validationParms.split(':');
-    var ruleName = validationParmsArr[0];
-    var constraintsValues = validationParmsArr[1].split(',');
 
     var message = validation.capitalise(proprtName) + ' value must be in ' + validationParmsArr[1];
     return message;
@@ -233,7 +227,6 @@ validation.booleanValidate = function (validationParms, rawObject, proprtName) {
 
     var validationParmsArr;
     validationParmsArr = validationParms.split(':');
-    var ruleName = validationParmsArr[0];
     var acceptable = [true, false, 0, 1, '0', '1'];
 
     if (rawObject.hasOwnProperty(proprtName)) {
@@ -367,7 +360,6 @@ validation.lengthValidate = function (validationParms, rawObject, proprtName) {
 
     var validationParmsArr;
     validationParmsArr = validationParms.split(':');
-    var ruleName = validationParmsArr[0];
     var constraintsValues = validationParmsArr[1].split(',');
 
     if (rawObject.hasOwnProperty(proprtName)) {
@@ -390,8 +382,6 @@ validation.lengthMessage = function (validationParms, rawObject, proprtName) {
 
     var validationParmsArr;
     validationParmsArr = validationParms.split(':');
-    var ruleName = validationParmsArr[0];
-    var constraintsValues = validationParmsArr[1].split(',');
 
     var message = validation.capitalise(proprtName) + ' should be ' + validationParmsArr[1].replace(',', ' to ') + ' character long.';
     return message;
@@ -526,7 +516,6 @@ validation.notInMessage = function (validationParms, rawObject, proprtName) {
  * @returns {boolean}
  */
 validation.issetValidate = function (validationParms, rawObject, proprtName) {
-    var validationParmsArr = validationParms.split(':');
     if (!rawObject.hasOwnProperty(proprtName)) {
         return false;
     }
@@ -561,7 +550,6 @@ validation.regexValidate = function (validationParms, rawObject, proprtName) {
  * @returns {boolean}
  */
 validation.requiredValidate = function (validationParms, rawObject, proprtName) {
-    var validationParmsArr = validationParms.split(':');
 
     var currentValue = rawObject[proprtName];
     if (typeof(currentValue) == 'undefined' && currentValue == null || currentValue.trim() == '' || currentValue.length == 0) {
@@ -700,17 +688,17 @@ validation.validate = function (rawObject, rules, messages, callback) {
     if (typeof rules == 'undefined') {
         var err = new Error("Please define the validation rules");
         err.status = 500;
-        throw(err);
+         callback(err, null);
     }
 
     if (Object.keys(rules).length < 1) {
         var err = new Error("Nothing to validate");
         err.status = 500;
-        throw(err);
+         callback(err, null);
     }
 
-
-    Object.keys(rules).forEach(function (key) {
+    try{
+        Object.keys(rules).forEach(function (key) {
         var validationRules = [];
         validationRules = rules[key].split("|");
 
@@ -737,8 +725,8 @@ validation.validate = function (rawObject, rules, messages, callback) {
                 }
 
 
-                var oldError = typeof errors[key] == 'undefined' ? {} : errors[key];
-                oldError[fns] = msg;
+                var oldError = typeof errors[key] == 'undefined' ? [] : errors[key];
+                oldError.push(msg);
                 errors[key] = oldError;
             }
 
@@ -746,13 +734,24 @@ validation.validate = function (rawObject, rules, messages, callback) {
 
 
     });
-
-    callback(errors);
+         callback(null, errors);
+    }catch(except){
+         callback(except, null);
+    }
+     
+    
 }
 
 
 validation.validator = function (priceObj, rules, messages, callback) {
 
-    return validation.validate(priceObj, rules, messages, callback);
+    validation.validate(priceObj, rules, messages, function(err, result){
+        if(err) callback(err, null);
+        var valid ={fails:false, getErrors:null};
+        if(Object.keys(result).length>0){
+            valid ={fails:true, getErrors:result};
+        }
+        callback(null, valid);
+    });
 }
 
