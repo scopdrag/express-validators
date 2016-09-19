@@ -131,4 +131,31 @@ Validators.validatorAsync(Obj, rules, messages)
 `fails` index will be true if there is an error. Otherwise it will be false.
 `getErrors` index contains error field as a key and array of error messages for that field.
 
+e.g: 
+
+```javascript
+
+{ currentDate: { after: 'CurrentDate must be later date then afterDate' },
+  beforeDateValue: { before: 'BeforeDateValue must be before date then afterDate' },
+  alphaValue: { alpha: 'AlphaValue must be entirely alphabetic characters.' },
+  alpha_numValue: { alpha_num: 'Alpha numValue must be alpha-numeric characters.' },
+  betweenValue: { between: 'BetweenValue value must be in 10,30' },
+  confirmedValue: { confirmed: 'ConfirmedValue value must be same as ConfirmedValue1' },
+  dateValue: { date: 'DateValue must be a valid date.' },
+  notEqualValue: { notEqual: 'NotEqualValue value must not be equal to AlphaValue' },
+  numericValue: { numeric: 'NumericValue must be a numeric value.' },
+  lengthValue: { length: 'LengthValue should be 10 to 30 character long.' },
+  emailValue: { email: 'Please enter a valid email address.....' },
+  ipValue: { ip: 'IpValue must be a valid ip address.' },
+  notInValue: { notIn: 'NotInValue must not be in 23,35.' },
+  issetValue: { isset: 'IssetValue does not exists.' },
+  regexValue: { regex: 'RegexValue found to be in invalid pattern.' },
+  requiredValue: { required: 'RequiredValue field is required.' },
+  requiredIfValue: { requiredIf: 'RequiredIfValue field is required.' },
+  stringValue: { string: 'StringValue must be a string.' },
+  urlValue: { url: 'UrlValue must be a valid url.' },
+  amountValue: { amount: 'AmountValue must be an amount value.' } }
+  
+```  
+
 
