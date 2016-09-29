@@ -1,6 +1,6 @@
 {
   "name": "express-validators",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Express framework json object(req) validator.",
   "main": "src/index.js",
   "scripts": {
