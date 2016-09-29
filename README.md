@@ -1,7 +1,12 @@
 # express-validators
 
-[![npm](https://img.shields.io/npm/v/github.svg?maxAge=2592000)](https://www.npmjs.com/package/github)
 
+[![npm](https://img.shields.io/npm/v/express-validators.svg?maxAge=2592000)](https://www.npmjs.com/package/express-validators)
+[![npm](https://img.shields.io/npm/dm/express-validators.svg?maxAge=2592000)](https://www.npmjs.com/package/express-validators)
+[![npm](https://img.shields.io/npm/dt/express-validators.svg?maxAge=2592000)](https://www.npmjs.com/package/express-validators)
+[![npm](https://img.shields.io/npm/l/express-validators.svg?maxAge=2592000)](https://www.npmjs.com/package/express-validators)
+
+<a href="https://nodei.co/npm/express-validators/"><img src="https://nodei.co/npm/express-validators.png?downloads=true&downloadRank=true&stars=true"></a>
 
 Nodejs (Express js) server side Validator
 Expressjs framework json object(request) validator package. 
