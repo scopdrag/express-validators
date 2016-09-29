@@ -1,5 +1,6 @@
 # express-validators
 
+[![npm](https://img.shields.io/npm/v/github.svg?maxAge=2592000)](https://www.npmjs.com/package/github)
 
 
 Nodejs (Express js) server side Validator
