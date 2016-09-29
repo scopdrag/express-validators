@@ -1,12 +1,14 @@
 # express-validators
 
-[![Wercker](https://img.shields.io/wercker/ci/wercker/docs.svg?maxAge=2592000)](https://www.npmjs.com/package/express-validators)
-[![npm](https://img.shields.io/npm/l/express.svg?maxAge=2592000)](https://www.npmjs.com/package/express-validators)
 [![npm](https://img.shields.io/npm/v/npm.svg?maxAge=2592000)](https://www.npmjs.com/package/express-validators)
-[![node](https://img.shields.io/node/v/gh-badges.svg?maxAge=2592000)]([![npm](https://img.shields.io/npm/v/npm.svg?maxAge=2592000)](https://www.npmjs.com/package/express-validators))
 [![VersionEye](https://img.shields.io/versioneye/d/ruby/rails.svg?maxAge=2592000)]([![node](https://img.shields.io/node/v/gh-badges.svg?maxAge=2592000)]([![npm](https://img.shields.io/npm/v/npm.svg?maxAge=2592000)](https://www.npmjs.com/package/express-validators)))
-[![npm](https://img.shields.io/npm/dm/localeval.svg?maxAge=2592000)](https://www.npmjs.com/package/express-validators)
-[![npm](https://img.shields.io/npm/dt/express.svg?maxAge=2592000)](https://www.npmjs.com/package/express-validators)
+
+
+[![Latest Version on npm][ico-version]][link-downloads]
+[![Software License][ico-license]](LICENSE.md)
+[![Total Downloads][ico-downloads]][link-downloads]
+
+
 
 
 Nodejs (Express js) server side Validator
@@ -168,3 +170,12 @@ e.g:
   amountValue: [ 'AmountValue must be an amount value.' ] }
   
 ```  
+
+
+
+[ico-version]: https://img.shields.io/packagist/v/Scopdrag/express-validators.svg?style=flat-square
+[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/Scopdrag/laravel-google-chart.svg?style=flat-square
+
+[link-downloads]: https://www.npmjs.com/package/express-validators
+[link-author]: https://github.com/:author_username
