@@ -13,7 +13,7 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 - Outdated dependencies.
 
 ### Fixed
-- Urlencode express js req validator issue.
+- Issue in validating urlencode request in expressjs (Fixed)
 
 
 ### Removed
