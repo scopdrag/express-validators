@@ -5,7 +5,6 @@
 [![npm](https://img.shields.io/npm/v/npm.svg?maxAge=2592000)](https://www.npmjs.com/package/express-validators)
 [![node](https://img.shields.io/node/v/gh-badges.svg?maxAge=2592000)]([![npm](https://img.shields.io/npm/v/npm.svg?maxAge=2592000)](https://www.npmjs.com/package/express-validators))
 [![VersionEye](https://img.shields.io/versioneye/d/ruby/rails.svg?maxAge=2592000)]([![node](https://img.shields.io/node/v/gh-badges.svg?maxAge=2592000)]([![npm](https://img.shields.io/npm/v/npm.svg?maxAge=2592000)](https://www.npmjs.com/package/express-validators)))
-[![npm](https://img.shields.io/npm/l/express.svg?maxAge=2592000)]([![VersionEye](https://img.shields.io/versioneye/d/ruby/rails.svg?maxAge=2592000)]
 [![npm](https://img.shields.io/npm/dm/localeval.svg?maxAge=2592000)](https://www.npmjs.com/package/express-validators)
 [![npm](https://img.shields.io/npm/dt/express.svg?maxAge=2592000)](https://www.npmjs.com/package/express-validators)
 
