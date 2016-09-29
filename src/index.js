@@ -44,7 +44,7 @@ validation.afterValidate = function (validationParms, rawObject, proprtName) {
     var validationParmsArr = validationParms.split(':');
     var afterDateIndex = validationParmsArr[1];
 
-    if (rawObject.hasOwnProperty(proprtName)) {
+    if (typeof rawObject[proprtName]!='undefined') {
         var currentDate = rawObject[proprtName];
         var afterDate = rawObject[afterDateIndex];
 
@@ -83,7 +83,7 @@ validation.afterMessage = function (validationParms, rawObject, proprtName) {
  */
 validation.alphaValidate = function (validationParms, rawObject, proprtName) {
 
-    if (rawObject.hasOwnProperty(proprtName)) {
+    if (typeof rawObject[proprtName]!='undefined') {
         var currentValue = rawObject[proprtName];
 
         var patt = new RegExp("/^[a-zA-Z]+$/");
@@ -103,7 +103,7 @@ validation.alphaValidate = function (validationParms, rawObject, proprtName) {
  */
 validation.alpha_numValidate = function (validationParms, rawObject, proprtName) {
 
-    if (rawObject.hasOwnProperty(proprtName)) {
+    if (typeof rawObject[proprtName]!='undefined') {
         var currentValue = rawObject[proprtName];
 
         var patt = new RegExp("/^[a-zA-Z_0-9]$/");
@@ -125,7 +125,7 @@ validation.alpha_numValidate = function (validationParms, rawObject, proprtName)
  */
 validation.arrayValidate = function (validationParms, rawObject, proprtName) {
 
-    if (rawObject.hasOwnProperty(proprtName)) {
+    if (typeof rawObject[proprtName]!='undefined') {
 
         if (typeof rawObject[proprtName] == 'array') {
             return false;
@@ -147,7 +147,7 @@ validation.beforeValidate = function (validationParms, rawObject, proprtName) {
     var validationParmsArr = validationParms.split(':');
     var afterDateIndex = validationParmsArr[1];
 
-    if (rawObject.hasOwnProperty(proprtName)) {
+    if (typeof rawObject[proprtName]!='undefined') {
         var currentDate = rawObject[proprtName];
         var afterDate = rawObject[afterDateIndex];
 
@@ -190,7 +190,7 @@ validation.betweenValidate = function (validationParms, rawObject, proprtName) {
     validationParmsArr = validationParms.split(':');
     var constraintsValues = validationParmsArr[1].split(',');
 
-    if (rawObject.hasOwnProperty(proprtName)) {
+    if (typeof rawObject[proprtName]!='undefined') {
         var currentValue = rawObject[proprtName];
         if (currentValue < constraintsValues[0] || currentValue > constraintsValues[1]) {
             return false;
@@ -229,7 +229,7 @@ validation.booleanValidate = function (validationParms, rawObject, proprtName) {
     validationParmsArr = validationParms.split(':');
     var acceptable = [true, false, 0, 1, '0', '1'];
 
-    if (rawObject.hasOwnProperty(proprtName)) {
+    if (typeof rawObject[proprtName]!='undefined') {
         var currentValue = rawObject[proprtName];
         if (acceptable.indexOf(currentValue) == -1) {
             return false;
@@ -250,7 +250,7 @@ validation.confirmedValidate = function (validationParms, rawObject, proprtName)
     var validationParmsArr = validationParms.split(':');
     var confirmValueIndex = validationParmsArr[1];
 
-    if (rawObject.hasOwnProperty(proprtName)) {
+    if (typeof rawObject[proprtName]!='undefined') {
         var currentValue = rawObject[proprtName];
         var confirmValue = rawObject[confirmValueIndex];
 
@@ -290,7 +290,7 @@ validation.confirmedMessage = function (validationParms, rawObject, proprtName) 
 validation.dateValidate = function (validationParms, rawObject, proprtName) {
 
 
-    if (rawObject.hasOwnProperty(proprtName)) {
+    if (typeof rawObject[proprtName]!='undefined') {
         var currentValue = rawObject[proprtName];
 
         if ((new Date(currentValue) === "Invalid Date") || isNaN(new Date(currentValue))) {
@@ -310,7 +310,7 @@ validation.dateValidate = function (validationParms, rawObject, proprtName) {
 validation.notEqualValidate = function (validationParms, rawObject, proprtName) {
     var validationParmsArr = validationParms.split(':');
     var secondValueIndex = validationParmsArr[1];
-    if (rawObject.hasOwnProperty(proprtName)) {
+    if (typeof rawObject[proprtName]!='undefined') {
         var currentValue = rawObject[proprtName];
         var secondValue = rawObject[secondValueIndex];
 
@@ -340,7 +340,7 @@ validation.notEqualMessage = function (validationParms, rawObject, proprtName) {
 validation.numericValidate = function (validationParms, rawObject, proprtName) {
 
 
-    if (rawObject.hasOwnProperty(proprtName)) {
+    if (typeof rawObject[proprtName]!='undefined') {
         var currentValue = rawObject[proprtName];
         if (isNaN(currentValue)) {
             return false;
@@ -362,7 +362,7 @@ validation.lengthValidate = function (validationParms, rawObject, proprtName) {
     validationParmsArr = validationParms.split(':');
     var constraintsValues = validationParmsArr[1].split(',');
 
-    if (rawObject.hasOwnProperty(proprtName)) {
+    if (typeof rawObject[proprtName]!='undefined') {
         var currentValue = rawObject[proprtName];
         if (currentValue.length < constraintsValues[0] || currentValue.length > constraintsValues[1]) {
             return false;
@@ -413,7 +413,7 @@ validation.notEqualMessage = function (validationParms, rawObject, proprtName) {
 validation.emailValidate = function (validationParms, rawObject, proprtName) {
     var re = /[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}/igm;
 
-    if (rawObject.hasOwnProperty(proprtName)) {
+    if (typeof rawObject[proprtName]!='undefined') {
         var currentValue = rawObject[proprtName];
         if (!re.test(currentValue))
             return false;
@@ -431,7 +431,7 @@ validation.emailValidate = function (validationParms, rawObject, proprtName) {
  */
 validation.inValidate = function (validationParms, rawObject, proprtName) {
     var validationParmsArr = validationParms.split(':');
-    if (rawObject.hasOwnProperty(proprtName)) {
+    if (typeof rawObject[proprtName]!='undefined') {
         var currentValue = rawObject[proprtName];
         if (validationParmsArr[1].indexOf(currentValue) == -1)
             return false;
@@ -466,7 +466,7 @@ validation.inMessage = function (validationParms, rawObject, proprtName) {
 validation.ipValidate = function (validationParms, rawObject, proprtName) {
     var re = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
 
-    if (rawObject.hasOwnProperty(proprtName)) {
+    if (typeof rawObject[proprtName]!='undefined') {
         var currentValue = rawObject[proprtName];
         if (!re.test(currentValue))
             return false;
@@ -484,7 +484,7 @@ validation.ipValidate = function (validationParms, rawObject, proprtName) {
  */
 validation.notInValidate = function (validationParms, rawObject, proprtName) {
     var validationParmsArr = validationParms.split(':');
-    if (rawObject.hasOwnProperty(proprtName)) {
+    if (typeof rawObject[proprtName]!='undefined') {
         var currentValue = rawObject[proprtName];
         if (validationParmsArr[1].indexOf(currentValue) != -1)
             return false;
@@ -516,7 +516,7 @@ validation.notInMessage = function (validationParms, rawObject, proprtName) {
  * @returns {boolean}
  */
 validation.issetValidate = function (validationParms, rawObject, proprtName) {
-    if (!rawObject.hasOwnProperty(proprtName)) {
+    if (!typeof rawObject[proprtName]!='undefined') {
         return false;
     }
     return true;
@@ -533,7 +533,7 @@ validation.regexValidate = function (validationParms, rawObject, proprtName) {
     var validationParmsArr = validationParms.split(':');
     var patt = new RegExp(validationParmsArr[1]);
 
-    if (rawObject.hasOwnProperty(proprtName)) {
+    if (typeof rawObject[proprtName]!='undefined') {
         var currentValue = rawObject[proprtName];
         if (!patt.test(currentValue)) {
             return false;
@@ -590,7 +590,7 @@ validation.requiredIfValidate = function (validationParms, rawObject, proprtName
  */
 validation.stringValidate = function (validationParms, rawObject, proprtName) {
 
-    if (rawObject.hasOwnProperty(proprtName)) {
+    if (typeof rawObject[proprtName]!='undefined') {
         var currentValue = rawObject[proprtName];
         if (typeof currentValue != 'string')
             return false;
@@ -610,7 +610,7 @@ validation.urlValidate = function (validationParms, rawObject, proprtName) {
 
     var urlregex = new RegExp("^(http|https|ftp)\://([a-zA-Z0-9\.\-]+(\:[a-zA-Z0-9\.&amp;%\$\-]+)*@)*((25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9])\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[0-9])|([a-zA-Z0-9\-]+\.)*[a-zA-Z0-9\-]+\.(com|edu|gov|int|mil|net|org|biz|arpa|info|name|pro|aero|coop|museum|[a-zA-Z]{2}))(\:[0-9]+)*(/($|[a-zA-Z0-9\.\,\?\'\\\+&amp;%\$#\=~_\-]+))*$");
 
-    if (rawObject.hasOwnProperty(proprtName)) {
+    if (typeof rawObject[proprtName]!='undefined') {
         var currentValue = rawObject[proprtName];
         if (!urlregex.test(currentValue)) {
             return false;
@@ -650,7 +650,7 @@ validation.getDefaultMessage = function (validationParms, rawObject, proprtName)
  */
 validation.amountValidate = function (validationParms, rawObject, proprtName) {
 
-    if (rawObject.hasOwnProperty(proprtName)) {
+    if (typeof rawObject[proprtName]!='undefined') {
         var patt = new RegExp("[0-9]+(\.[0-9][0-9]?)?");
         if (!patt.test(rawObject[proprtName]) || parseInt(rawObject[proprtName]) != rawObject[proprtName]) {
             return false;
