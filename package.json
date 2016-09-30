@@ -12,9 +12,10 @@
   },
   "keywords": [
     "request-validator",
-    "json-object-validator",
-    "validator",
+    "json object validator",
+    "validators",
     "express",
+    "express-validators",
     "nodejs"
   ],
   "author": "Nikhil Yadav <scopdrag@gmail.com> (http://scopdrag.com)",
