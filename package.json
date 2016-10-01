@@ -11,10 +11,13 @@
     "url": "git+https://codemonster34@gmail.com@github.com/scopdrag/express-validators.git"
   },
   "keywords": [
+    "validation",
+    "validator",
     "request-validator",
     "json object validator",
-    "validators",
     "express",
+    "validators",
+    "javascript",
     "express-validators",
     "nodejs"
   ],
