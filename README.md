@@ -9,7 +9,7 @@
 <a href="https://nodei.co/npm/express-validators/"><img src="https://nodei.co/npm/express-validators.png?downloads=true&downloadRank=true&stars=true"></a>
 
 Nodejs (Express js) server side Validator.
-This package offer very simple and easy way to validate any type of json or request for nodejs and expressjs.
+This package offer very simple and easy way to validate any type of json object (request json object) for nodejs and expressjs.
 This validator also work with bluebird promise as well as async meathod callback.
 Expressjs framework json object(request) validator package. 
 
