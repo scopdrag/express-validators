@@ -9,15 +9,16 @@
 <a href="https://nodei.co/npm/express-validators/"><img src="https://nodei.co/npm/express-validators.png?downloads=true&downloadRank=true&stars=true"></a>
 
 Nodejs (Express js) server side Validator.
-This package offer very simple and easy way to validate any type of json object (request json object) for nodejs and expressjs.
-This validator also work with bluebird promise as well as async meathod callback.
+This package offer very simple and easy way to validate any type of json object (request json object) for expressjs.
+This validator also work with bluebird promise as well as async method callback.
 Expressjs framework json object(request) validator package. 
 
 
-1. Using NPM
+ Install using NPM
 ```bash
 npm install express-validators --save
 ```
+ require in your (expressjs) route file.
 ```javascript
 var Validators = require('express-validators')
 ```
@@ -40,7 +41,7 @@ var Validators = Promise.promisifyAll(require('express-validators'));
 
 ## Usage
 
-1) e.g: Json object need to be validated.
+ e.g: Json object need to be validated.
 
 ```javascript
 
@@ -74,7 +75,7 @@ var Validators = Promise.promisifyAll(require('express-validators'));
 ```
 
 
-2. You can specify the rules for each index in json object. also you can specify multiple rules for a particular index.
+ You can specify the rules for each index in json object. also you can specify multiple rules for a particular index.
 
 ```javascript
 
@@ -105,7 +106,7 @@ var Validators = Promise.promisifyAll(require('express-validators'));
     
 ```
 
-You can define messages for each rule of an index. if don't specify the messages it will return default messages. It is not mendatory.
+ You can define messages for each rule of an index. if don't specify the messages it will return default messages. It is not mendatory.
 
 
 ```javascript
@@ -117,6 +118,8 @@ You can define messages for each rule of an index. if don't specify the messages
     };
 ```
 
+
+ Call to validator meathod
 
 ```javascript
 
