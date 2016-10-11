@@ -552,7 +552,7 @@ validation.regexValidate = function (validationParms, rawObject, proprtName) {
 validation.requiredValidate = function (validationParms, rawObject, proprtName) {
 
     var currentValue = rawObject[proprtName];
-    if (typeof(currentValue) == 'undefined' && currentValue == null || currentValue.trim() == '' || currentValue.length == 0) {
+    if (typeof(currentValue) == 'undefined' && currentValue == null || currentValue.toString().trim() == '' || currentValue.length == 0) {
         return false;
     }
     return true;
@@ -573,7 +573,7 @@ validation.requiredIfValidate = function (validationParms, rawObject, proprtName
 
     if (typeof rawObject[anotherFieldIndex] != "undefined" && anotherFieldValue == rawObject[anotherFieldIndex]) {
         var currentValue = rawObject[proprtName];
-        if (typeof(currentValue) == 'undefined' && currentValue == null || currentValue.trim() == '' || currentValue.length == 0) {
+        if (typeof(currentValue) == 'undefined' && currentValue == null || currentValue.toString().trim() == '' || currentValue.length == 0) {
             return false;
         }
     }
