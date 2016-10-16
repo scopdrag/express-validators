@@ -12,6 +12,7 @@ validation.defaultMessages = {
     boolean: "must be a boolean value.",
     date: "must be a valid date.",
     numeric: "must be a numeric value.",
+    digit: "must be a numeric digit only.",
     email: "must be a valid email address.",
     ip: "must be a valid ip address.",
     isset: "does not exists.",
@@ -348,6 +349,22 @@ validation.numericValidate = function (validationParms, rawObject, proprtName) {
     }
     return true;
 }
+
+
+
+
+
+validation.digitValidate = function (validationParms, rawObject, proprtName) {
+    if (typeof rawObject[proprtName]!='undefined') {
+        if (!/^[0-9]+$/.test(rawObject[proprtName])) {
+            return false;
+        }
+
+    }
+    return true;
+}
+
+ 
 
 /**
  * validte chracter length
