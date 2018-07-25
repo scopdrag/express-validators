@@ -1,4 +1,4 @@
-# express-validators
+# validator-for-express
 
 
 [![npm](https://img.shields.io/npm/v/express-validators.svg?maxAge=2592000)](https://www.npmjs.com/package/express-validators)
@@ -16,18 +16,18 @@ Expressjs framework json object(request) validator package.
 
  Install using NPM
 ```bash
-npm install express-validators --save
+npm i validator-for-express --save
 ```
  require in your (expressjs) route file.
 ```javascript
-var Validators = require('express-validators')
+var Validators = require('validator-for-express')
 ```
 
 or if you using bluebird promise
 
 ```javascript
 var Promise = require('bluebird');
-var Validators = require('express-validators');
+var Validators = require('validator-for-express');
 Promise.promisifyAll(Validators);
 ```
 
@@ -35,7 +35,7 @@ Or
 
 ```javascript
 
-var Validators = Promise.promisifyAll(require('express-validators'));
+var Validators = Promise.promisifyAll(require('validator-for-express'));
 ```
 
 
@@ -75,12 +75,12 @@ var Validators = Promise.promisifyAll(require('express-validators'));
 ```
 
 
- You can specify the rules for each index in json object. also you can specify multiple rules for a particular index.
+ You can specify the rules for each index in json object. also you can specify multiple rules for a particular index by adding "|" after first rule.
 
 ```javascript
 
     var rules = {
-        "currentDate": "after:afterDate",
+        "currentDate": "after:afterDate|date",
         "beforeDateValue": "before:afterDate",
         "alphaValue": "alpha",
         "alpha_numValue": "alpha_num",
