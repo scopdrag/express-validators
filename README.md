@@ -1,13 +1,6 @@
 # validator-for-express
 
 
-[![npm](https://img.shields.io/npm/v/express-validators.svg?maxAge=2592000)](https://www.npmjs.com/package/express-validators)
-[![npm](https://img.shields.io/npm/dm/express-validators.svg?maxAge=2592000)](https://www.npmjs.com/package/express-validators)
-[![npm](https://img.shields.io/npm/dt/express-validators.svg?maxAge=2592000)](https://www.npmjs.com/package/express-validators)
-[![npm](https://img.shields.io/npm/l/express-validators.svg?maxAge=2592000)](https://www.npmjs.com/package/express-validators)
-
-<a href="https://nodei.co/npm/express-validators/"><img src="https://nodei.co/npm/express-validators.png?downloads=true&downloadRank=true&stars=true"></a>
-
 Nodejs (Express js) server side Validator.
 This package offer very simple and easy way to validate any type of json object (request json object) for expressjs.
 This validator also work with bluebird promise as well as async method callback.
