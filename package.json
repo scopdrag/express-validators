@@ -1,6 +1,6 @@
 {
-  "name": "express-validators",
-  "version": "1.0.4",
+  "name": "validator-for-express",
+  "version": "1.0.2",
   "description": "Express framework json object(req) validator.",
   "main": "src/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://codemonster34@gmail.com@github.com/scopdrag/express-validators.git"
+    "url": "git+https://github.com/beliga44/express-validators"
   },
   "keywords": [
     "validation",
@@ -21,7 +21,7 @@
     "express-validators",
     "nodejs"
   ],
-  "author": "Nikhil Yadav <scopdrag@gmail.com> (http://scopdrag.com)",
+  "author": "Nikhil Yadav <scopdrag@gmail.com> (http://scopdrag.com) and Beliga <beliga44@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/scopdrag/express-validators/issues"

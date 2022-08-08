@@ -741,22 +741,19 @@ validation.validate = function (rawObject, rules, messages, callback) {
                         var msg = validation.getDefaultMessage(fnsParams, rawObject, key)
                     }
 
-
-                    var oldError = typeof errors[key] == 'undefined' ? [] : errors[key];
-                    oldError.push(msg);
+                    var oldError = typeof errors[key] == 'undefined' ? null : errors[key];
+                    oldError = msg;
+                    // var oldError = typeof errors[key] == 'undefined' ? [] : errors[key];
+                    // oldError.push(msg);
                     errors[key] = oldError;
                 }
 
             }
-
-
         });
         callback(null, errors);
     } catch (except) {
         callback(except, null);
     }
-
-
 }
 
 
@@ -779,3 +776,23 @@ validation.validator = function (priceObj, rules, messages, callback) {
     });
 }
 
+
+validation.validatorAsync = function (priceObj, rules, messages) {
+    if (typeof priceObj !== 'object') {
+        throw(new Error("Please provide an object to validate"));
+    } else if (Object.keys(priceObj).length == 0) {
+        throw(new Error("Please provide a valid object to validate"));
+    }
+
+    return new Promise((resolve, reject) => {
+        validation.validate(priceObj, rules, messages, function (err, result) {
+            if (err)
+                reject(err)
+            var valid = {fails: false, getErrors: null};
+            if (Object.keys(result).length > 0) {
+                valid = {fails: true, getErrors: result};
+            }
+            resolve(valid)
+        });
+    });
+}
